@@ -12,7 +12,7 @@ The goal of this project is to enable developers with account in github to get t
 
 , export them as widgets and integrate into any application
 
-<h2>Table of Contents
+<h2>Table of Contents<h2>
 
 - [Goal](#goal)
 - [Use cases](#use-cases)
