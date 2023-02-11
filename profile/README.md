@@ -7,8 +7,10 @@ The goal of this project is to enable developers with account in github to get t
 1. Number of contributions 
 2. number of commits 
 3. number of stars across projects
+   - You get the idea right 💡
 
-You get the idea right 💡
+
+, export them as widgets and integrate into any application
 
 <h2>Table of Contents
 
