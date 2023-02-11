@@ -27,9 +27,9 @@ The goal of this project is to enable developers with account in github to get t
 
 
 ## Goal
-The main goal of this project is to make meaning full applications of Github Statistics
+The main goal of this project is to make meaning full applications using Github Statistical information
 
-In order for the stats to be really useful wouldn't it be cool if an web app is able to export them as html widgets either as plain html mark up with css  or through the  language frameworks of your choice such as react/vue/angular, tailwind css etc as reusable components that can be plugged into any projects.
+In order for the stats to become useful, wouldn't it be cool if a web app is able to export them as html widgets either as plain html mark up with css or through the  language frameworks of your choice such as react/vue/angular, tailwind css etc as reusable components that can be plugged into any projects.
 
 Sounds valid € , but not so sure where to use those widgets 🤔
 
@@ -52,7 +52,8 @@ Sounds valid € , but not so sure where to use those widgets 🤔
 ## Bare Minimum
 
 To begin with a bare minimum set of features, it's ideally nice to have an application that implements [Use case 1](#personal-blog) 
-
+    
+Exporting the statistics as html widgets could be a first step for a bare minimum app
 
 ## Motivation
 There are quite few motivational aspects behind the idea for this project.
