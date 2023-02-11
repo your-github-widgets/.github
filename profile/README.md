@@ -52,7 +52,7 @@ Sounds valid € , but not so sure where to use those widgets 🤔
 ## Bare Minimum
 
 To begin with a bare minimum set of features, it's ideally nice to have an application that implements [Use case 1](#personal-blog) 
-    
+
 Exporting the statistics as html widgets could be a first step for a bare minimum app
 
 ## Motivation
@@ -63,9 +63,9 @@ There are quite few motivational aspects behind the idea for this project.
 
 
 ## Foundation
-Principle foundation of this project is Github. So in order to make this project really usable , applications need to talk to github apis to provide useful statistics as widgets
+Principle foundation for this project is Github. So in order to make this project really usable , applications need to talk to github apis to provide useful statistics as widgets
 
-So Github APIs have to be explored well to figure out the foundational architecture of the project
+So Github APIs have to be explored well to figure out the foundational architecture for the project
 
 ### Where To Explore
 1. Rest API can be explored [here](https://docs.github.com/en/rest?apiVersion=2022-11-28)
