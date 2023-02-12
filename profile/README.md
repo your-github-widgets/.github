@@ -23,6 +23,15 @@ The goal of this project is to enable developers with account in github to get t
 - [Foundation](#foundation)
   - [Where To Explore](#where-to-explore)
   - [Architecture](#architecture)
+    - [Github API Provider](#github-api-provider)
+    - [What is stored ?](#what-is-stored-)
+    - [Widgets](#widgets)
+      - [List of Widgets](#list-of-widgets)
+    - [Export Service](#export-service)
+    - [Widget Export](#widget-export)
+    - [Component Library](#component-library)
+    - [Federation](#federation)
+  - [Code Organization](#code-organization)
   - [Tech Stack](#tech-stack)
 
 
@@ -63,17 +72,80 @@ There are quite few motivational aspects behind the idea for this project.
 
 
 ## Foundation
-Principle foundation for this project is Github. So in order to make this project really usable , applications need to talk to github apis to provide useful statistics as widgets
+Principle foundation for this project is Github. So in order to make this project to work , applications need to talk to github APIs to provide useful statistics as widgets
 
 So Github APIs have to be explored well to figure out the foundational architecture for the project
 
 ### Where To Explore
 1. Rest API can be explored [here](https://docs.github.com/en/rest?apiVersion=2022-11-28)
-2. GraphQL API can be explored [here](https://docs.github.com/en/graphql)
 
 ### Architecture
-- TBD
+ <img src="./../arch.svg" alt="Architecture" />
 
+ #### Github API Provider
+ Github API provider provides auth related information to the consumers of the API (Widgets).
+
+ Useful information is stored in a persisted storage to be able to remember the authenticated user
+
+ #### What is stored ?
+ - Auth token for exchange of information
+ - Github User data 
+
+#### Widgets
+
+Widgets are consumers of github apis and providers to widget export package.
+
+Widgets are limited to API specific logic such as connecting to a github API , defining the external libraries to be used in the package
+A single Widget cannot call more than one Github API
+For instance , `Contribution` widgets can only make request github contributions API
+
+A single `Widget`  define its own tech stack . 
+
+> Contribution Widget can be a React app with graph ql connectors
+> 
+> Calendar widget can be a Vue app with trpc connector
+
+##### List of Widgets
+- Contribution
+- Stars
+- Calendar
+
+#### Export Service
+Export service provides an API gateway for `widgets` and `widget- export` to communicate.
+Widget export recieves useful export related information from widget.
+
+Code level transformations is done in export service.
+
+> 💡 High level description of export service is TBD
+
+#### Widget Export
+
+Widget Export is responsible for exporting a widget as usable code snippet , that can be embedded in a static html page.
+
+For instance , a contribution widget can be exported as html markup with  `tailwind` css or vanilla css 
+
+Widget export is a sandbox environment that allows the following
+1. Code level customizations
+   1. Edit HTML/CSS and move elements around 
+   2. Live preview of changes
+2. Tailwind css integration
+3. Vanilla css integration
+
+> 💡 TBD: Define what external tool should be used 
+
+#### Component Library
+The Component library is the central repository of all the UI components that is shared between services
+
+The library exposes two variants of components
+1. React Components for React based widgets
+2. Vue Components for Vue based widgets
+
+
+#### Federation
+
+> 💡 TBD: Define the federation logic here 
+### Code Organization
+- TBD
 ### Tech Stack
 - TBD
 
