@@ -80,7 +80,7 @@ So Github APIs have to be explored well to figure out the foundational architect
 1. Rest API can be explored [here](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 
 ### Architecture
- <img src="./../arch.svg" alt="Architecture" />
+ <img src="https://github.com/your-github-widgets/.github/blob/main/arch.svg" alt="Architecture" />
 
  #### Github API Provider
  Github API provider provides auth related information to the consumers of the API (Widgets).
